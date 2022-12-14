@@ -23,6 +23,23 @@ public class Today221209 {
         }
 
         return answer;
+         
+        /* 다른 사람 풀이 - Math.sqrt() : 제곱근 구하는 함수
+        int answer = 0;
+
+        for (int i=left;i<=right;i++) {
+            //제곱수인 경우 약수의 개수가 홀수
+            ex) 25 : 1 5 25
+            
+            if (i % Math.sqrt(i) == 0) {
+                answer -= i;
+            }
+            //제곱수가 아닌 경우 약수의 개수가 짝수
+            else {
+                answer += i;
+            }
+        }
+        return answer;*/
     }
 
     public static void main(String[] args) {
