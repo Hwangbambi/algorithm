@@ -7,8 +7,30 @@ public class Today20230101 {
     //"for the last week"-> "For The Last Week"
 
     public static String solution(String s) {
+        String[] s_split = s.split(" ");
         String answer = "";
-        return answer;
+
+        for (String str : s_split) {
+            String[] str_split = str.split("");
+
+            if (isInteger(str_split[0])){
+                answer += (str + " ");
+
+            } else {
+                answer += (str.substring(0, 1).toUpperCase() + str.substring(1) + " ");
+            }
+        }
+
+        return answer.trim();
+    }
+
+    public static boolean isInteger(String strValue) {
+        try {
+            Integer.parseInt(strValue);
+            return true;
+        } catch (NumberFormatException ex) {
+            return false;
+        }
     }
 
     public static void main(String[] args) {
