@@ -5,6 +5,8 @@ public class Today20230101 {
     //s	return
     //"3people unFollowed me" -> "3people Unfollowed Me"
     //"for the last week"-> "For The Last Week"
+    
+    // 중간에 공백이 2개 이상일 때도 공백 2개가 모두 들어가게끔 공부해보기
 
     public static String solution(String s) {
         String newStr = s.replaceAll("\\s+", " ");
