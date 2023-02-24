@@ -1,0 +1,34 @@
+package codingTest;
+
+public class Today20230224 {
+    // Q. 최대공약수와 최소공배수
+    // 두 수를 입력받아 두 수의 최대공약수와 최소공배수를 반환
+    // 배열의 맨 앞에 최대공약수, 그다음 최소공배수를 넣어 반환
+    // 3, 12의 최대공약수는 3, 최소공배수는 12이므로 solution(3, 12)는 [3, 12]를 반환
+
+    public static int[] solution(int n, int m) {
+
+        int num = 1;
+        int count = 0;
+
+        // 최대 공약수 구하기
+        if (m % num == 0) {
+            num++;
+            count++;
+        }
+
+        int[] answer = new int[count];
+
+
+
+
+
+
+        return answer;
+    }
+
+    public static void main(String[] args) {
+        Today20230223.solution(3,12);
+    }
+
+}
