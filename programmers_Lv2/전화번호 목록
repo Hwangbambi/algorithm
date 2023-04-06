@@ -1,6 +1,31 @@
-class Solution {
-    public boolean solution(String[] phone_book) {
+package org.example;
+
+import java.util.Arrays;
+
+public class codingtest20230406 {
+    // Q. 전화번호 목록
+    // 전화번호를 담은 배열 phone_book 이 solution 함수의 매개변수로 주어질 때,
+    // 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false
+    // 그렇지 않으면 true를 return 하도록 solution 함수를 작성해주세요.
+
+    public static boolean solution(String[] phone_book) {
         boolean answer = true;
+
+        int n = 0;
+
+        int[] phone_book_int = Arrays.stream(phone_book)
+                .mapToInt(Integer::parseInt)
+                .toArray();
+
+        for (int i = 0; i < phone_book_int.length; i++){
+            System.out.println(phone_book_int[i]);
+        }
+
         return answer;
+    }
+
+    public static void main(String[] args) {
+        String[] phone_book = {"12","123","1235","567","88"};
+        codingtest20230406.solution(phone_book);
     }
 }
