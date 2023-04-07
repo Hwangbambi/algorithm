@@ -7,18 +7,19 @@ public class codingtest20230406 {
     // 전화번호를 담은 배열 phone_book 이 solution 함수의 매개변수로 주어질 때,
     // 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false
     // 그렇지 않으면 true를 return 하도록 solution 함수를 작성해주세요.
+    // 4/7 효율성 테스트 실패 원인 찾기
 
     public static boolean solution(String[] phone_book) {
-        boolean answer = true;
+         boolean answer = true;
 
-        int n = 0;
-
-        int[] phone_book_int = Arrays.stream(phone_book)
-                .mapToInt(Integer::parseInt)
-                .toArray();
-
-        for (int i = 0; i < phone_book_int.length; i++){
-            System.out.println(phone_book_int[i]);
+        for (int i = 0; i < phone_book.length; i++){
+            for (int j = 0; j < phone_book.length; j++) {
+                if (i != j) {
+                    if (phone_book[i].startsWith(phone_book[j])) {
+                        return false;
+                    }
+                }
+            }
         }
 
         return answer;
